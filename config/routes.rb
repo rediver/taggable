@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'tags/:tag', to: 'posts#index', as: :tag
   get 'user_view/index'
 
   resources :posts
