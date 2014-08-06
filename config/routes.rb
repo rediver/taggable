@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  get 'user_view/index'
+
   resources :posts
+
+  root :to => 'user_view#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
