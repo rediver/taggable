@@ -2,5 +2,8 @@
 
 	<%= post.title %> <br />
 	<%= post.content %>
+	<%= post.tag_list %>
+
+	Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
 
 <% end %>
